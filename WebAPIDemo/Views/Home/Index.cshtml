@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<input type="text" name="name1" id="txt1" value=""/>
+<input type="button" name="name2" id="btn1" value="Get Details by Id"/>
+<input type="button" name="name3" id="btn2" value="Get All Details" />
+<ul id="names"></ul>
+<script>
+    $(document).ready(function () {
+
+        $.btn.click(function () {
+            $.get("https://api.openweathermap.org", function (response) {
+                $.getjson("", Function(data))
+                {
+                    $.each(data, function (key, val) {
+                        $("<li>" + val + "</li>").appendto($("#names"));
+                        console.log(response);
+                    })
+                }
+            })
+
+</script>
+
